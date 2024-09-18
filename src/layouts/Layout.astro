@@ -14,7 +14,10 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link>
 		<title>{title}</title>
+
 	</head>
 	<body>
 		<!--<slot />-->
@@ -51,6 +54,25 @@ const { title } = Astro.props;
 			
 		</header>
 		<div class="banner" >
+			<menu class="Small-menu">
+				<li><a href="">tu tienda</a></li>
+				<li><a href="">nuevo y destacable</a></li>
+				<li><a href="">Categorias</a></li>
+				<li><a href="">Tienda de puntos</a></li>
+				<li><a href="">Noticias</a></li>
+				<li><a href="">Laboratorios</a></li>
+
+				<form class="search">
+					<input id="search" type="search" placeholder="buscar">
+					<button >
+						<i id="magnifying"class="fa-solid fa-magnifying-glass"></i>
+					</button>
+
+				</form>
+
+			</menu>
+
+
 
 		</div>
 		<div class="banner2 container">
@@ -152,7 +174,11 @@ background-color: #97bb14;
 
 .banner{
 	background: orange;
+	
+	background-size: cover;
 	height: 360px;
+	position: relative; /* Necesario para que el posicionamiento absoluto de .Small-menu funcione */
+	background: url(https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000015381/d0268be3a717ed2ded03fa77aea451e4cb0e95045ad80da3a726439fe258eb88)no-repeat center center;
 }
 .banner2{
 	background: purple;
@@ -172,5 +198,57 @@ background-color: #97bb14;
 	background-color: aqua;
 	height: 1200px;
 }
-	
+	.Small-menu{
+		display: flex;
+	background: linear-gradient(43deg, rgba(2,0,36,1) 0%, rgba(47,47,186,1) 57%, rgba(43,71,77,1) 96%);;
+	margin: 20px auto 0 auto;
+	width: 75%;
+	padding: 15px 20px 15px 40px;
+	position: absolute; /* Posiciona el menú absolutamente */
+    /* Centra el menú horizontalmente */
+	top: 9%;
+	left:20%;
+
+   
+
+
+	}
+	.Small-menu li{
+		display: inline-block;
+		margin-right: 15px;
+
+
+	}
+
+	.Small-menu a{
+
+		
+		color: white;
+		text-decoration: none;
+
+	}
+	.search{
+		padding-left: 40px;
+		display: flex;
+		gap: 0px;
+		margin-top: -3px ;
+	}
+	#search{
+		background-color: rgb(4, 0, 61);
+		
+		border-radius: 5px;
+		color: white;
+		border: #161d24e1;
+	}
+	button{
+	background: rgb(151, 151, 255);
+	height: 25px;
+	border-radius: 5px;
+	border: none;
+	}
+	#magnifying{
+
+	color: blue;
+	}
+
 </style>
