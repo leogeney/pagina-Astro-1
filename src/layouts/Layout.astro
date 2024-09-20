@@ -7,248 +7,191 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="p-0 m-0">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<link>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+			integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link />
 		<title>{title}</title>
-
 	</head>
-	<body>
+	<body class="p-0 m-0">
 		<!--<slot />-->
 
-		<header>
-			<div class="container">
+		<header class="bg-black h-20 text-center">
+			<div class="container max-w-[1200px] mx-auto">
 				<div class="flex-menu">
-<img src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="">
+					<img
+						src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
+						alt="" class="w-[160px]"
+					/>
 					<menu>
 						<li><a href="">tienda</a></li>
 						<li><a href="">comunidad</a></li>
 						<li><a href="">acerca de</a></li>
 						<li><a href="">soporte</a></li>
-
 					</menu>
 				</div>
 				<div class="menu-right">
 					<a href="#" class="btn-download">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-						  </svg>
-						  
-													
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="size-6"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+							></path>
+						</svg>
+
 						Instalar Steam
 					</a>
-					 <a href="">Iniciar sesion</a>
-					 |
-					 <a href=""> Idioma</a>
-					
+					<a href="">Iniciar sesion</a>
+					|
+					<a href=""> Idioma</a>
 				</div>
-
 			</div>
-			
-			
 		</header>
-		<div class="banner" >
-			<menu class="Small-menu">
-				<li><a href="">tu tienda</a></li>
-				<li><a href="">nuevo y destacable</a></li>
-				<li><a href="">Categorias</a></li>
-				<li><a href="">Tienda de puntos</a></li>
-				<li><a href="">Noticias</a></li>
-				<li><a href="">Laboratorios</a></li>
+		<div class="banner container max-w-[2200px] mx-auto bg-orange-400 h-96 bg-cover relative" ></div>
+		<div class="left-menu"></div>
+		<div class="banner2 container max-w-[1200px] mx-auto h-80 bg-black"></div>
+		<div class="banner3 container h-[1200px] bg-cyan-800 max-w-full" ></div>
 
-				<form class="search">
-					<input id="search" type="search" placeholder="buscar">
-					<button >
-						<i id="magnifying"class="fa-solid fa-magnifying-glass"></i>
-					</button>
-
-				</form>
-
-			</menu>
-
-
-
-		</div>
-		<div class="banner2 container">
-			<div class="left-menu">
-
-			</div>
-
-		</div>
-		<div class="banner3">
+		<div
+			class="group items-center hover:cursor-pointer transition-colors duration-300 hover:bg-red-600 rounded text-white px-6 py-10 inline-flex bg-blue-500"
+		>
+		<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="size-7 mr-1 mt-[1px]  group-hover:animate-spin group-hover:text-green-400"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"
+				></path>
+			</svg>
 
 
+			Presióname!
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="size-4 mt-[2.5px] ml-1"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+			</svg>
+
+			
 		</div>
 	</body>
 </html>
-<style >
-	html,body{
-		padding: 0;
-		margin: 0;
-	}
+<style>
+	
 
-	header{
-		text-align: center;
-		height: 80px;
-		background: #161d24;
-		
-	}
+	
+	/*
 	.container {
 		text-align: center;
 		max-width: 1200px;
 		margin: 0;
-		
 	}
+*/
+	.flex-menu,
+	li {
+		list-style: none;
+		display: inline-block;
 
-	.flex-menu, li{
-list-style: none;
-display: inline-block;
-
-margin-left: 10px;
-
-	} 
-	.flex-menu img{
-
-		width: 160px;
+		margin-left: 10px;
 	}
-	.flex-menu a{
+	
+
+	.flex-menu a {
 		font-weight: 600;
 		text-decoration: none;
-		color: blanchedalmond;
+		color: rgb(255, 255, 255);
 	}
-	.flex-menu a :hover{
+	.flex-menu a :hover {
 		color: white;
 	}
 
-
-.flex-menu {
-	margin: 0;
-	display: flex;
-	height: 80px;
-	width: 60%;
-	float: left;
-	align-items: center;
-	color: blanchedalmond;
-	font-family: sans-serif;
-	text-transform: uppercase;
-	
-}
-
-.menu-right{
-	color: blanchedalmond;
-	font-family: sans-serif;
-	margin-top: 8px;
-	width: 40%;
-	float: left;
-}
-.menu-right a{
-
-	text-decoration: none;
-	color: antiquewhite;
-	margin: 0 8px;
-}
-.btn-download{
-	color: white;
-	background: #789806;
-	display: inline-block;
-	padding: 6px 12px;
-	font-family: sans-serif;
-	text-decoration: none;
-	display: inline-flex;
-	gap: 8px;
-	align-items: center;
-}
-.btn-download svg{
-
-	width: 20px;
-}
-.btn-download:hover{
-background-color: #97bb14;
-}
-
-.banner{
-	background: orange;
-	
-	background-size: cover;
-	height: 360px;
-	position: relative; /* Necesario para que el posicionamiento absoluto de .Small-menu funcione */
-	background: url(https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000015381/d0268be3a717ed2ded03fa77aea451e4cb0e95045ad80da3a726439fe258eb88)no-repeat center center;
-}
-.banner2{
-	background: purple;
-	height: 240px;
-}
-.left-menu{
-
-	background: pink;
-	width: 180px;
-	height: 360px;
-	position: absolute;
-	left: 0;
-	position: sticky;
-}
-.banner3{
-
-	background-color: aqua;
-	height: 1200px;
-}
-	.Small-menu{
+	.flex-menu {
+		margin: 0;
 		display: flex;
-	background: linear-gradient(43deg, rgba(2,0,36,1) 0%, rgba(47,47,186,1) 57%, rgba(43,71,77,1) 96%);;
-	margin: 20px auto 0 auto;
-	width: 75%;
-	padding: 15px 20px 15px 40px;
-	position: absolute; /* Posiciona el menú absolutamente */
-    /* Centra el menú horizontalmente */
-	top: 9%;
-	left:20%;
-
-   
-
-
-	}
-	.Small-menu li{
-		display: inline-block;
-		margin-right: 15px;
-
-
+		height: 80px;
+		width: 60%;
+		float: left;
+		align-items: center;
+		color: rgb(255, 255, 255);
+		font-family: sans-serif;
+		text-transform: uppercase;
 	}
 
-	.Small-menu a{
-
-		
-		color: white;
+	.menu-right {
+		color: rgb(255, 255, 255);
+		font-family: sans-serif;
+		margin-top: 8px;
+		width: 40%;
+		float: left;
+	}
+	.menu-right a {
 		text-decoration: none;
-
+		color: rgb(255, 255, 255);
+		margin: 0 8px;
 	}
-	.search{
-		padding-left: 40px;
-		display: flex;
-		gap: 0px;
-		margin-top: -3px ;
-	}
-	#search{
-		background-color: rgb(4, 0, 61);
-		
-		border-radius: 5px;
+	.btn-download {
 		color: white;
-		border: #161d24e1;
+		background: #789806;
+		display: inline-block;
+		padding: 6px 12px;
+		font-family: sans-serif;
+		text-decoration: none;
+		display: inline-flex;
+		gap: 8px;
+		align-items: center;
 	}
-	button{
-	background: rgb(151, 151, 255);
-	height: 25px;
-	border-radius: 5px;
-	border: none;
+	.btn-download svg {
+		width: 20px;
 	}
-	#magnifying{
+	.btn-download:hover {
+		background-color: #97bb14;
+	}
 
-	color: blue;
-	}
+	
+	
+	.left-menu {
+		float: left;
+		z-index: 1;
+		background: pink;
+		width: 180px;
+		height: 360px;
 
+		left: calc(((100% - 1200px) / 2) - 180px);
+		position: sticky;
+		top: 0;
+	}
+	
 </style>
