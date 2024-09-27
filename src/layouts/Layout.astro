@@ -24,32 +24,60 @@ const { title } = Astro.props;
 		<link />
 		<title>{title}</title>
 	</head>
-	<body class="p-0 m-0">
+	<body class="p-0 m-0 bg-black">
 		<!--<slot />-->
 
 		<header class="bg-black h-20 text-center">
 			<div class="container max-w-[1200px] mx-auto">
-				<div class="flex-menu">
+				<div
+					class="flex-menu m-0 flex h-20 w-[60%] float-left items-center text-white font-sans uppercase"
+				>
 					<img
 						src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
-						alt="" class="w-[160px]"
+						alt=""
+						class="w-[160px]"
 					/>
 					<menu>
-						<li><a href="">tienda</a></li>
-						<li><a href="">comunidad</a></li>
-						<li><a href="">acerca de</a></li>
-						<li><a href="">soporte</a></li>
+						<li class="inline-block list-none ml-[10px]">
+							<a
+								class="font-semibold no-underline text-neutral-50 hover:text-blue-600"
+								href="">tienda</a
+							>
+						</li>
+						<li class="inline-block list-none ml-[10px]">
+							<a
+								class="font-semibold no-underline text-neutral-50 hover:text-blue-600"
+								href="">comunidad</a
+							>
+						</li>
+						<li class="inline-block list-none ml-[10px]">
+							<a
+								class="font-semibold no-underline text-neutral-50 hover:text-blue-600"
+								href="">acerca de</a
+							>
+						</li>
+						<li class="inline-block list-none ml-[10px]">
+							<a
+								class="font-semibold no-underline text-neutral-50 hover:text-blue-600"
+								href="">soporte</a
+							>
+						</li>
 					</menu>
 				</div>
-				<div class="menu-right">
-					<a href="#" class="btn-download">
+				<div
+					class="menu-right text-white font-sans mt-2 w-[40%] float-left"
+				>
+					<a
+						href="#"
+						class="btn-download my-0 mx-8 text-white bg-[#789806] inline-flex items-center gap-2 px-3 py-1.5 font-sans no-underline hover:bg-green-700"
+					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke-width="1.5"
 							stroke="currentColor"
-							class="size-6"
+							class="size-6 w-[30px]"
 						>
 							<path
 								stroke-linecap="round"
@@ -66,21 +94,136 @@ const { title } = Astro.props;
 				</div>
 			</div>
 		</header>
-		<div class="banner container max-w-[2200px] mx-auto bg-orange-400 h-96 bg-cover relative" ></div>
-		<div class="left-menu"></div>
-		<div class="banner2 container max-w-[1200px] mx-auto h-80 bg-black"></div>
-		<div class="banner3 container h-[1200px] bg-cyan-800 max-w-full" ></div>
+		<div
+			class="banner container max-w-[2200px] mx-auto bg-cover bg-center h-96 relative bg-[url(https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2024/07/ea-sports-fc-25-3650630.jpg)]"
+		>
+			<menu
+				class="Small_menu flex justify-center bg-blue-600 w-[1000px] absolute m-[30px] ml-[400px] h-[30px] items-center gap-[40px]"
+			>
+				<div>
+					<li class="inline-block list-none ml-[10px]">
+						<a
+							class="font-semibold no-underline text-neutral-50 hover:text-blue-800 p-[4.5px] hover:bg-blue-200 transition-colors duration-300"
+							href="">Tu tienda</a
+						>
+					</li>
+					<li class="inline-block list-none ml-[10px]">
+						<a
+							class="font-semibold no-underline text-neutral-50 hover:text-blue-800 p-[4.5px] hover:bg-blue-200 transition-colors duration-300"
+							href="">Nuevo y destacable</a
+						>
+					</li>
+					<li class="inline-block list-none ml-[10px]">
+						<a
+							class="font-semibold no-underline text-neutral-50 hover:text-blue-800 p-[4.5px] hover:bg-blue-200 transition-colors duration-300"
+							href="">Categorias</a
+						>
+					</li>
+					<li class="inline-block list-none ml-[10px]">
+						<a
+							class="font-semibold no-underline text-neutral-50 hover:text-blue-800 p-[4.5px] hover:bg-blue-200 transition-colors duration-300"
+							href="">Tienda de puntos</a
+						>
+					</li>
+
+					<li class="inline-block list-none ml-[10px]">
+						<a
+							class="font-semibold no-underline text-neutral-50 hover:text-blue-800 p-[4.5px] hover:bg-blue-200 transition-colors duration-300"
+							href="">Noticia</a
+						>
+					</li>
+
+					<li class="inline-block list-none ml-[10px]">
+						<a
+							class="font-semibold no-underline text-neutral-50 hover:text-blue-800 p-[4.5px] hover:bg-blue-200 transition-colors duration-300"
+							href="">Laboratorios</a
+						>
+					</li>
+				</div>
+
+				<div class="formulary flex">
+					<input
+						type="search"
+						placeholder="buscar"
+						class="bg-blue-950 hover:border-yellow-400"
+					/>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-6 text-gray-50 bg-blue-900 cursor-pointer"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+						></path>
+					</svg>
+				</div>
+			</menu>
+		</div>
+		<div
+			class="left-menu float-left z-10 bg-gray-900 w-44 h-[360px] sticky top-0 text-cyan-100 font-semibold"
+			style="left: calc(((100% - 1200px) / 2) - 180px);"
+		>
+
+		<img src="https://store.akamai.steamstatic.com/public/images//gift/steamcards_promo_03.png?v=1 " alt="" >
+		TARJETA DE REGALOS
+		<a href="#" class="subtitle1 text-cyan-700 mt-[-5px] hover:text-cyan-200 no-underline">Tarjeta de regalos</a>
+		<div class="text-xs absolute mt-[10px]">
+			<p>RECOMENDADOS</p>
+			<li class="list-none hover:text-sky-900 "><a href="">Amigos</a></li>
+			<li class="list-none hover:text-sky-900 "><a href="">Mentores</a></li>
+			<li class="list-none hover:text-sky-900 "><a href="">Etiquetas</a></li>	
+		</div>	
+	
+	
+	</div>
+		<div class="banner2 container max-w-[1200px] mx-auto h-96 bg-black">
+			<div class="subtitle text-white absolute mt-[30px] font-semibold">
+				<p>DATOS Y RECOMENDADOS</p>
+			</div>
+
+			<div class="images flex">
+				<img
+					src="https://cloudfront-eu-central-1.images.arcpublishing.com/diarioas/XIABHNNLL5GYHGSOSF2AOSQZNQ.jpg"
+					alt=""
+					class="w-[700px] h-[350px] absolute mt-[60px]"
+				/>
+				<img
+					src="https://gdm-assets.b-cdn.net/images/ncavvykf/realsport-production/b646a68e52ee1b331b99042104e3b291a5c820da-1197x626.jpg?rect=3,0,1192,626&w=1200&h=630&auto=format"
+					alt=""
+					class="w-[700px] h-[350px] absolute mt-[60px] ml-[500px]"
+				/>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="size-[60px] bg-gray-900 text-red-700 absolute mt-[200px] ml-[1200px] cursor-pointer transition-color duration-300 hover:text-yellow-300 "
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="banner3 container h-[1200px] bg-cyan-800 max-w-full"></div>
 
 		<div
 			class="group items-center hover:cursor-pointer transition-colors duration-300 hover:bg-red-600 rounded text-white px-6 py-10 inline-flex bg-blue-500"
 		>
-		<svg
+			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
 				viewBox="0 0 24 24"
 				stroke-width="1.5"
 				stroke="currentColor"
-				class="size-7 mr-1 mt-[1px]  group-hover:animate-spin group-hover:text-green-400"
+				class="size-7 mr-1 mt-[1px] group-hover:animate-spin group-hover:text-green-400"
 			>
 				<path
 					stroke-linecap="round"
@@ -88,7 +231,6 @@ const { title } = Astro.props;
 					d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"
 				></path>
 			</svg>
-
 
 			Presióname!
 			<svg
@@ -104,94 +246,7 @@ const { title } = Astro.props;
 					stroke-linejoin="round"
 					d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
 			</svg>
-
-			
 		</div>
 	</body>
 </html>
-<style>
-	
-
-	
-	/*
-	.container {
-		text-align: center;
-		max-width: 1200px;
-		margin: 0;
-	}
-*/
-	.flex-menu,
-	li {
-		list-style: none;
-		display: inline-block;
-
-		margin-left: 10px;
-	}
-	
-
-	.flex-menu a {
-		font-weight: 600;
-		text-decoration: none;
-		color: rgb(255, 255, 255);
-	}
-	.flex-menu a :hover {
-		color: white;
-	}
-
-	.flex-menu {
-		margin: 0;
-		display: flex;
-		height: 80px;
-		width: 60%;
-		float: left;
-		align-items: center;
-		color: rgb(255, 255, 255);
-		font-family: sans-serif;
-		text-transform: uppercase;
-	}
-
-	.menu-right {
-		color: rgb(255, 255, 255);
-		font-family: sans-serif;
-		margin-top: 8px;
-		width: 40%;
-		float: left;
-	}
-	.menu-right a {
-		text-decoration: none;
-		color: rgb(255, 255, 255);
-		margin: 0 8px;
-	}
-	.btn-download {
-		color: white;
-		background: #789806;
-		display: inline-block;
-		padding: 6px 12px;
-		font-family: sans-serif;
-		text-decoration: none;
-		display: inline-flex;
-		gap: 8px;
-		align-items: center;
-	}
-	.btn-download svg {
-		width: 20px;
-	}
-	.btn-download:hover {
-		background-color: #97bb14;
-	}
-
-	
-	
-	.left-menu {
-		float: left;
-		z-index: 1;
-		background: pink;
-		width: 180px;
-		height: 360px;
-
-		left: calc(((100% - 1200px) / 2) - 180px);
-		position: sticky;
-		top: 0;
-	}
-	
-</style>
+<style></style>
